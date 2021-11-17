@@ -67,12 +67,12 @@ const Home = () => {
         </div>
 
         <div className="text-center">
-        {dataGithub ? <GithubUser
+        {dataGithub? <GithubUser
         name={dataGithub?.name}
-        name_login={dataGithub ?.login}
+        name_login={dataGithub?.login}
         bio={dataGithub?.bio}
-        avatar={dataGithub ?.avatar_url}
-        github={dataGithub ?.html_url}
+        avatar={dataGithub?.avatar_url}
+        github={dataGithub?.html_url}
         public_repos={dataGithub?.public_repos}
         follower={dataGithub?.followers}
         following={dataGithub?.following}

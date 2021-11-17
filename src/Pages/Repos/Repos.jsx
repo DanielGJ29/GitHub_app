@@ -26,7 +26,7 @@ const Repos = () => {
         </div>
         <div className="w-11/12 mx-auto grid md:grid-cols-3 gap-10 "> 
             {
-               repos ? repos.map( singleRepos =>(
+               repos ? repos.map( (singleRepos, key) =>(
                     <>
                     <div className="mt-10 border-0 rounded-lg flex flex-col justify-between bg-gray p-4">
                         <div className="flex justify-between">
