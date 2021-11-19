@@ -66,7 +66,7 @@ const Home = () => {
         </div>
 
         <div className="text-center">
-        {dataGithub? <GithubUser
+        {dataGithub && <GithubUser
         name={dataGithub?.name}
         name_login={dataGithub?.login}
         bio={dataGithub?.bio}
@@ -75,7 +75,7 @@ const Home = () => {
         public_repos={dataGithub?.public_repos}
         follower={dataGithub?.followers}
         following={dataGithub?.following}
-        handleClick={handleClick}/> : null}
+        handleClick={handleClick}/>}
 
         </div>
         {loader && <Loader/>}

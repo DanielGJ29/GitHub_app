@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 
 import GithubUser from '../../Components/Custom/GithubUser/GithubUser';
+import Loader from '../../Components/Custom/Loader/Loader';
 
 
 const Follower = () => {
@@ -24,14 +25,16 @@ const Follower = () => {
     return (
         <div>
             <h2 className="text-center text-3xl font-bold">Followers</h2>
-            {
+            { followers ? (
                 followers?.map(user =>(
                     <GithubUser
                     name_login={user.login}
                     avatar={user.avatar_url}
                     github={user.html_url}
+                    key={user.id}
                     />
                 ))
+            ): <Loader/>
             }
         </div>
     );

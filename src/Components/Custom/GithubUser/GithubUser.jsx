@@ -5,7 +5,7 @@ import "./GithubUserStyle.css";
 const GithubUser = (props) => {
 
        
-    const {name,name_login,bio,avatar,github,public_repos,follower,following,handleClick }= props
+    const {name,name_login,bio,avatar,github,public_repos,follower,following,handleClick}= props
     return (
         <div className=" bg-gray card-container w-10/12 md:w-1/3 m-auto mt-4 rounded">
             <div className=" header-card flex flex-col justify-between items-center">
@@ -16,11 +16,7 @@ const GithubUser = (props) => {
             </div>
             <div className="text-sm md:text-base  text-black w-5/6 m-auto flex justify-between items-center mt-2">
                 {name_login ? <p onClick={handleClick}><Link to={`/repos/${name_login}`}>Repos: <span className="font-bold">{public_repos}</span></Link></p> : null }
-                <p onClick={handleClick} >
-                    <Link to={`/follower/${name_login}`}> 
-                    Follower: <span className="font-bold">{follower}</span> 
-                    </Link>
-                </p>
+                {name_login && <p onClick={handleClick} ><Link to={`/follower/${name_login}`}> Follower: <span className="font-bold">{follower}</span> </Link></p>}
                 {following ? <p>Following:<span className="font-bold">{following}</span></p> : null}
             </div>
             <div className="w-ful flex justify-center bg-black">
