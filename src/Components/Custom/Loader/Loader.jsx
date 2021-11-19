@@ -1,10 +1,9 @@
 import React from 'react';
+import "./Loader.Style.css";
 
 const Loader = () => {
     return (
-        <div>
-            <p>Load ...</p>
-        </div>
+        <div className="loader"></div>
     );
 };
 

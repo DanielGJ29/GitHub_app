@@ -13,7 +13,7 @@ const Form = ({handleSearch, handleChangeSearch}) => {
     return (
         <form action="" onSubmit={(e)=>handleSearch(e)}>
             <input id="input-search" className="search-input w-40 md:w-80 h-8  text-center rounded-lg ml-6 md:ml-0" 
-                    type="text" placeholder="Search City"
+                    type="text" placeholder="Name"
                     onChange={({target})=>handleChangeSearch(target)}
             />
             <span className="ml-5">icon</span>

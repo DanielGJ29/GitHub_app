@@ -34,7 +34,6 @@ const Home = () => {
         setDataGithub(null);
         const inputSearch = document.getElementById("input-search");
         inputSearch.value = "";
-        console.log("click")
     }
 
     useEffect(()=>{

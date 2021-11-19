@@ -16,7 +16,7 @@ const Repos = () => {
          setRepos(result);
         }
         handleRepos();
-    },[]);
+    },[name]);
     return (
         <>
         
